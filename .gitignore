@@ -1,0 +1,10 @@
+/target/
+
+/src/test/java/com/choucair/rimac/sas/runner/RunnerCesareots.java
+
+/src/test/resources/dataDriven/~$*.xlsx
+/src/test/resources/dataDriven/_plantillas/~$*.xlsx
+/src/test/resources/dataDriven/cesareots/
+/src/test/resources/dataDriven/choucair/
+
+/src/test/resources/features/cesareots.feature
