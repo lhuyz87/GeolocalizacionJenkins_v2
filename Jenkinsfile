@@ -8,7 +8,7 @@ pipeline {
 	
         stage ('Build') {
             steps {
-                sh ("mvn -f P-Geo/pom.xml clean verify")
+                sh ("mvn clean verify")
             }
             
         }
@@ -16,9 +16,9 @@ pipeline {
                 steps{
                     script{
                         try{
- 						sh ("mvn -f P-Geo/pom.xml verify package -P Rimac")
-        				sh ("mvn -f P-Geo/pom.xml test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' --glue rimac\"")
-        				sh ("mvn -f P-Geo/pom.xml serenity:aggregate")
+ 						sh ("mvn verify package -P Rimac")
+        				sh ("mvn test -Dcucumber.options=\"src/test/resources/features/ --tags \'${ESCENARIO}\' --glue rimac\"")
+        				sh ("mvn serenity:aggregate")
         				echo 'Ejecucion de pruebas sin errores...'
                          }
                         catch(ex)
